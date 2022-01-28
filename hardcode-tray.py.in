@@ -38,7 +38,7 @@ textdomain("@PACKAGE@")
 sys_path.insert(0, "@PYTHON_DIR@")
 
 from HardcodeTray.app import App
-from HardcodeTray.const import DESKTOP_ENV, ICONS_SIZE, THEMES_LIST
+from HardcodeTray.const import DESKTOP_ENV, THEMES_LIST
 from HardcodeTray.enum import Action, ConversionTools
 
 if geteuid() != 0:
@@ -76,8 +76,8 @@ parser.add_argument("--path", "-p",
 parser.add_argument("--revert", "-r", action='store_true',
                     help=_("Revert fixed hardcoded tray icons"))
 parser.add_argument("--size", "-s", help=_("Use a different icon size instead "
-                                           "of the default one."),
-                    type=int, choices=ICONS_SIZE)
+                                           "of the default one (22)."),
+                    type=int, default=22)
 parser.add_argument("--theme",
                     help=_("Use a different icon theme instead "
                            "of the default one."),

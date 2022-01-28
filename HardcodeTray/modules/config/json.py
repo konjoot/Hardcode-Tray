@@ -23,7 +23,7 @@ from __future__ import absolute_import
 from json import load
 from os import path
 
-from HardcodeTray.const import CONFIG_FILE, ICONS_SIZE
+from HardcodeTray.const import CONFIG_FILE
 from HardcodeTray.modules.log import Logger
 from HardcodeTray.modules.theme import Theme
 
@@ -61,10 +61,6 @@ class JSONConfig:
         if self._icons:
             icon_size = self._icons.get("size")
             Logger.debug("Config/Icon Size: {}".format(icon_size))
-            if icon_size not in ICONS_SIZE:
-                Logger.warning("Config/Icon Size: Incorrect.")
-                Logger.debug("Config/Icon Size: Detected icon "
-                             "size will be used.")
         return icon_size
 
     def theme(self):

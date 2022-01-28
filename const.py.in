@@ -37,4 +37,3 @@ THEMES_LIST = get_themes(USERHOME)
 DE = ["i3", "cinnamon", "budgie", "deepin", "pantheon",
       "gnome", "kde", "unity", "mate", "xfce"]
 DESKTOP_ENV = detect_de(DE)
-ICONS_SIZE = [16, 22, 24]
